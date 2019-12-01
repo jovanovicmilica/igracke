@@ -114,6 +114,7 @@ a{
 .vesti{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     padding: 10px;
 }
@@ -218,6 +219,13 @@ a .fab, .fa-bars{
     .meniU ul{
         flex-direction: column;
     }
+    .vesti img, .tekstvesti{
+        width: 80%;
+    }
+    #vesti h3{
+        margin: 15px;
+    }
+
 
 
     
