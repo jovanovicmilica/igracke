@@ -219,6 +219,11 @@ a .fab, .fa-bars{
     .meniU ul{
         flex-direction: column;
     }
+    #meni{
+        position: absolute;
+        right: 150px;
+        top: -74px;
+    }
     .vesti img, .tekstvesti{
         width: 80%;
     }
@@ -234,6 +239,6 @@ a .fab, .fa-bars{
 
 @media screen and (max-width:480px){
     .blok{
-        width: 70%;
+        width: 60%;
     }
 }
