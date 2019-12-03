@@ -27,7 +27,7 @@ header{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #fef1df;
     transition: 0.3s ease-out;
 }
 
@@ -61,7 +61,7 @@ a{
 #meni{
     position: absolute;
     top: 74px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #fef1df;
 }
 #lizapodmeni{
     position: relative;
@@ -73,11 +73,11 @@ a{
     display: block;
 }
 .scrolling{
-    background-color: rgba(0, 0, 0, 0.7)!important;
+    background-color: rgba(184, 222, 222, 1)!important;
     transition: 0.3s ease-out;
 }
-.scrollingA{
-    color: #fff;
+#slika img{
+    margin-top: 70px;
 }
 #slika img,.blok img{
     width: 100%;
@@ -105,7 +105,7 @@ a{
 }
 #vesti{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(184, 222, 222, 0.5);
     padding: 30px 0px;
 }
 #vesti h3{
@@ -134,7 +134,7 @@ a{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(184, 222, 222, 1);
 }
 .footerB{
     padding: 30px 0px;
@@ -147,7 +147,7 @@ a{
     margin-bottom: 10px;
 }
 #footer ul li{
-    padding-left: 0px;
+    padding: 10px 0px;
 }
 #news{
     width: 70%;
@@ -167,12 +167,18 @@ a{
     flex-direction: row!important;
     padding-top: 15px;
 }
-a .fab, .fa-bars{
+a .fab{
+    font-size: 30px; 
+}
+.fa-bars{
     font-size: 40px; 
 }
 
 #treciD{
     margin: 15px 0px;
+}
+.bold{
+    font-weight: bold;
 }
 
 @media screen and (max-width:1000px){
@@ -182,6 +188,9 @@ a .fab, .fa-bars{
 }
 
 @media screen and (max-width:820px){
+    #slika img{
+        margin-top: 0px;
+    }
     .blok{
         width: 30%;
     }
@@ -206,6 +215,7 @@ a .fab, .fa-bars{
     }
     header{
         justify-content: space-around;
+        position: static;
     }
     header div{
         display: block!important;
@@ -217,7 +227,9 @@ a .fab, .fa-bars{
         text-align: left;
     }
     .meniU{
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: #fef1df;
+        width: 100%;
+        text-align: center;
     }
     .meniU ul{
         flex-direction: column;
@@ -228,12 +240,8 @@ a .fab, .fa-bars{
     #vesti h3{
         margin: 25px;
     }
-    ul li{
-        padding: 25px 0px;
-    }
-    #meni li{
-        margin-top: 20px;
-        padding: 25px 25px;
+    header li, #meni li{
+        padding: 25px;
     }
     #lizapodmeni{
         padding: 0px;
@@ -241,13 +249,7 @@ a .fab, .fa-bars{
     ul li a{
         font-size: 25px;
     }
-
-    
-
-
-
-    
-    
+  
 }
 
 @media screen and (max-width:480px){
