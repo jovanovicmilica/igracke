@@ -215,14 +215,10 @@ a .fab, .fa-bars{
     }
     .meniU{
         background-color: rgba(255, 255, 255, 0.2);
-    }
-    .meniU ul{
-        flex-direction: column;
+        width: 100%;
     }
     #meni{
-        position: absolute;
-        right: 150px;
-        top: -74px;
+        display: flex;
     }
     .vesti img, .tekstvesti{
         width: 80%;
@@ -230,6 +226,7 @@ a .fab, .fa-bars{
     #vesti h3{
         margin: 15px;
     }
+    
 
 
 
