@@ -144,6 +144,8 @@ a{
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
+    width: 90%;
+    margin: 0px auto;
 }
 .vesti p{
     text-align: justify;
