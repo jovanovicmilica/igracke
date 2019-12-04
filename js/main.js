@@ -8,11 +8,14 @@ slika.setAttribute("alt","Slajder slika");
 
 //FOOTER
 var footer=document.getElementById("footer");
+var okvir=document.createElement("div");
+okvir.setAttribute("class", "drzac");
+footer.appendChild(okvir);
 var naslovNiz=["Igračke d.o.o.", "Informacije", "Newsletter"];
 for(let i=0;i<naslovNiz.length;i++){
     var footerBlokovi=document.createElement("div");
     footerBlokovi.setAttribute("class","footerB");
-    footer.appendChild(footerBlokovi);
+    okvir.appendChild(footerBlokovi);
     var naslov=document.createElement("h3");
     var tekst=document.createElement("ul");
     tekst.setAttribute("id", "ul"+[i]);
