@@ -8,7 +8,7 @@ slika.setAttribute("alt","Slajder slika");
 
 //FOOTER
 var footer=document.getElementById("footer");
-var naslovNiz=["Igracke", "Informacije", "Newsletter"];
+var naslovNiz=["Igracke d.o.o.", "Informacije", "Newsletter"];
 for(let i=0;i<naslovNiz.length;i++){
     var footerBlokovi=document.createElement("div");
     footerBlokovi.setAttribute("class","footerB");
@@ -51,37 +51,46 @@ for(let i=0;i<nizMreze.length;i++){
     ico.setAttribute("class",nizMreze[i]);
 }
 var treciD=document.createElement("div");
+var forma2=document.createElement("form");
+forma2.setAttribute("method","GET");
+forma2.setAttribute("action","#");
+forma2.setAttribute("id","forma2");
 treciD.setAttribute("id","treciD");
 var input=document.createElement("input");
 input.setAttribute("type", "text");
 input.setAttribute("name", "news");
 input.setAttribute("id", "news");
 input.setAttribute("placeholder", "E-mail");
-treciD.appendChild(input);
+treciD.appendChild(forma2);
+forma2.appendChild(input);
 var posalji=document.createElement("input");
 posalji.setAttribute("type", "button");
 posalji.setAttribute("value", "Posalji");
 posalji.setAttribute("id", "posaljiN");
-treciD.appendChild(posalji);
+forma2.appendChild(posalji);
 document.querySelectorAll(".footerB")[2].insertBefore(treciD,treci);
 
 
-let url=this.location.href;
+var dokumentacija=document.createElement("a");
+dokumentacija.innerHTML="Dokumentacija";
+dokumentacija.setAttribute("href","#");
+document.querySelectorAll(".footerB")[2].appendChild(dokumentacija);
+
+
+let url=location.href;
 
 if(url.indexOf("index.html")!=-1){
-var nizNaslovAkcija=["LEGO DISNEY PRINCESS ","BURAGO STREET FIRE GARAZA","IMC TOYS PLISANA MACA","POWER RANGERS VOZILO"];
-var nizCenaAkcija=["12.399,00","3.899,00", "6.799,00", "6.499,00"];
+var nizNaslovAkcija=["Lego princeza","Garaza","Plisana maca","Vozilo"];
 var novaCenaAkcija=["9.919,20","3.119,21","5.439,19","5.199,19"];
 proizvodi("akcija","Ove nedelje na akciji","akcija",nizNaslovAkcija,novaCenaAkcija);
-var pTag=document.createElement("p");
     
 
 var vesti=document.getElementById("vesti");
-var vestiH=document.createElement("h1");
+var vestiH=document.createElement("h2");
 vesti.appendChild(vestiH);
 vestiH.innerHTML="Vesti";
 var nizS=["druzenje.jpg"];
-var h3tekst=["DRUŽENJE U SHOPPING CENTRU ADA MALL"];
+var h3tekst=["Druzenje Ada mall-u"];
 var tekstvoviV=["Drugari, u subotu 12.decembra od 14h do 19h na drugom spratu Ada Mall-a oganizuju NEZABORAVNO DRUŽENJE,a svi dobijaju poklone! Pozvani su svi klinci i klinceze da dođu i pridruže se sklapanju slagalica i drugim igrama. Dođite da se igramo, takmičimo i osvajamo poklone! Čekamo vas na drugom spratu ispred naših radnji! Najuspešniji takmičari dobijaju vredne nagrade."]
 for(let i=0;i<nizS.length;i++){
     var jednaVest=document.createElement("div");
@@ -100,6 +109,20 @@ for(let i=0;i<nizS.length;i++){
     tekst.appendChild(tekstVesti);
     slike.setAttribute("src","img/"+nizS[i]);
 }
+
+var plug=document.getElementById("plug");
+var brendovi=document.createElement("h2");
+brendovi.innerHTML="Brendovi";
+var drzacB=document.createElement("div");
+drzacB.setAttribute("class","drzac");
+brendovi.appendChild(drzacB);
+var slicica=[];
+plug.appendChild(brendovi);
+for(let i=0;i<10;i++){
+    slicica[i]=document.createElement("img");
+    slicica[i].src="img/slicica"+[i+1]+".jpg";
+    drzacB.appendChild(slicica[i]);
+}
 }
 if(url.indexOf("decaci.html")!=-1){
     var nizNaslovDecaci=["Mešalica","Kamion đubretarac","Kamion mešalica","Mini kamion","Puška na vodu","Kofica za plažu","Vitezovi kamuflaža","Zmaj","Mač","Lopta","Viljuškar","Policijski auto","Set alata","Traktor sa prikolicom","Faraonova piramida"];
@@ -112,7 +135,7 @@ if(url.indexOf("devojcice.html")!=-1){
     proizvodi("devojcice","Devojcice","devojcice",nizNaslovDevojcice,novaCenaDevojcice);
     }
 if(url.indexOf("bebi.html")!=-1){
-    var nizNaslovbebi=["Svetleći medvedić","Playgro Žirafa","Fisher Roly Poly","Tomas i drugari vozić","Slonče za uspavljivanje","Noćni projektor ovčice","Zvečka za kolica","Vozić","Slonić na vuču","Knjiga za kupanje","Telefon na vuču","Kružići","Zebra karike","Uhvati bubamaru","Interaktivna muzička knjiga"];
+    var nizNaslovbebi=["Svetleći medvedić","Žirafa","Figurice","Tomas i drugari vozić","Slonče za uspavljivanje","Noćni projektor ovčice","Zvečka za kolica","Vozić","Slonić na vuču","Knjiga za kupanje","Telefon na vuču","Kružići","Zebra karike","Uhvati bubamaru","Interaktivna muzička knjiga"];
     var novaCenabebi=["3.499,00","2.899,00","1.389,00","1.399,00","2.999,00","6.459,00","2.899,00","1.990,00","1.349,00","569,00","2.999,00","1.999,00","779,00","799,00","2.259,00"];
     proizvodi("bebe","Program za bebe","bebis",nizNaslovbebi,novaCenabebi);
     }
@@ -122,6 +145,101 @@ if(url.indexOf("drusigre.html")!=-1){
     var novaCenaIgre=["1.099,00","299,00","1.299,00","989,00","2.499,00","129,00","999,00","799,00","1.899,00","848,00","3.999,00","499,00","2.199,00","1.099,00","799,00"];
     proizvodi("drusigre","Društvene igre","igra",nizNaslovIgre,novaCenaIgre);
 }
+
+if(url.indexOf("kontakt.html")!=-1){
+    //forma validacija
+    var imePrezime=document.getElementById("imePrezime");
+    var telefon=document.getElementById("telefon");
+    var email=document.getElementById("email");
+    var poruka=document.getElementById("poruka");
+    var taster=document.getElementById("posalji");
+
+
+    var reImePrezime=/^[A-ZČĆŠĐŽ][a-zčćšđž]{2,}(\s[A-Z][a-z]{2,})*$/; 
+    var reTelefon=/^06[\d]\/[\d]{3}\-[\d]{2}-[\d]{2,3}$/;
+    var reEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+    var tacno=0;
+
+    imePrezime.addEventListener("blur", function(){
+        if(reImePrezime.test(imePrezime.value)){
+            imePrezime.classList.add("ispravno");
+            imePrezime.classList.remove("greska");
+            tacno++;
+        }
+        else{
+            imePrezime.classList.remove("ispravno");
+            imePrezime.classList.add("greska");
+            tacno=0;
+        }
+    });
+
+    telefon.addEventListener("blur", function(){
+        if(reTelefon.test(telefon.value)){
+            telefon.classList.add("ispravno");
+            telefon.classList.remove("greska");
+            tacno++;
+        }
+        else{
+            telefon.classList.remove("ispravno");
+            telefon.classList.add("greska");
+            tacno=0;
+        }
+    });
+
+    email.addEventListener("blur", function(){
+        if(reEmail.test(email.value)){
+            email.classList.add("ispravno");
+            email.classList.remove("greska");
+            tacno++;
+        }
+        else{
+            email.classList.remove("ispravno");
+            email.classList.add("greska");
+            tacno=0;
+        }
+    });
+
+    poruka.addEventListener("blur", function(){
+        if(poruka.value==''){
+            poruka.classList.remove("ispravno");
+            poruka.classList.add("greska");
+            tacno=0;
+        }
+        else{
+            poruka.classList.add("ispravno");
+            poruka.classList.remove("greska");
+            tacno++;
+        }
+    });
+    var greske=document.getElementById("greske");
+    greske.classList.add("none");
+    var ispravno=document.getElementById("tacno");
+    ispravno.classList.add("none");
+    taster.addEventListener("click",function(){
+        if(tacno){
+            greske.classList.add("none");
+            ispravno.classList.remove("none");
+        }
+        else{
+            greske.classList.remove("none");
+            ispravno.classList.add("none");
+        }
+    });
+
+    var prodavnica=document.querySelector("#prodavnica");
+    var slikepr=["img/prodavnica1.jpg","img/prodavnica2.jpg","img/prodavnica3.jpg"];
+    var i=0;
+    function slajderProdavnice(){
+        prodavnica.src=slikepr[i];
+        if(i<slikepr.length-1) i++;
+        else i=0;
+        setTimeout(slajderProdavnice, 3000);
+    };
+    slajderProdavnice();
+
+}
+
 }
 
 function proizvodi(id, naslov,slikanaziv,nizNaslov,novaCena){
@@ -130,17 +248,17 @@ function proizvodi(id, naslov,slikanaziv,nizNaslov,novaCena){
     akcija.appendChild(h1);
     h1.innerHTML=naslov;
     var drzac=document.createElement("div");
-    drzac.setAttribute("id", "drzac");
+    drzac.setAttribute("class", "drzac");
     akcija.appendChild(drzac);
     for(let i=0;i<nizNaslov.length;i++){
     var blokovi=document.createElement("div");
     blokovi.setAttribute("class","blok");
     drzac.appendChild(blokovi);
-    slika[i]=document.createElement("img")
+    slika[i]=document.createElement("img");
     slika[i].setAttribute("src", "img/"+slikanaziv+[i+1]+".jpg");
     slika[i].setAttribute("alt", "Slika"+[i+1]);
     blokovi.appendChild(slika[i]);
-    var naslov=document.createElement("h2");
+    var naslov=document.createElement("p");
     blokovi.appendChild(naslov);
     naslov.innerHTML=nizNaslov[i];
     var cenaN=document.createElement("span");

@@ -4,22 +4,32 @@
     box-sizing: border-box;
     line-height: 1.6;
 }
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
 h1{
     margin: 20px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
 }
 h2{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+h3{
     font-size: 20px;
 }
 p{
-    font-size: 20px;
+    font-size: 22px;
 }
 .pTag{
     text-decoration: line-through #707070;
     color: #707070;
 }
 .span{
-    color: red;
-    font-size: 22px;
+    color: #0233b7;
+    font-size: 18px;
 }
 header{
     width: 100%;
@@ -47,13 +57,13 @@ ul li{
     padding: 21px;
 }
 ul li a{
-    text-decoration: none;
     padding: 15px;
     font-size: 20px;
     color: #000;
 }
 a{
     color: #000;
+    text-decoration: none;
 }
 #meni li a{
     padding: 0px;
@@ -87,11 +97,14 @@ a{
     width: 100%;
     text-align: center;
 }
-#drzac{
+.drzac{
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+#plug img{
+    width: 20%;
 }
 .blok{
     width: 15%;
@@ -123,7 +136,6 @@ a{
     font-size: 18px;
 }
 .vesti h3{
-    font-size: 20px;
     margin-bottom: 5px;
 }
 .vesti img, .tekstvesti{
@@ -152,6 +164,8 @@ a{
 #news{
     width: 70%;
     border-radius: 5px 0px 0px 5px;
+    border: 1px solid #c2c2c2;
+    padding: 5px;
 }
 #posaljiN,#news{
     height: 30px;
@@ -180,6 +194,67 @@ a .fab{
 .bold{
     font-weight: bold;
 }
+#kontakt{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px;
+}
+.kontakt{
+    width: 35%;
+    margin-top: 20px;
+}
+.kontakt img{
+    border-radius: 5px;
+    width: 100%;
+}
+#imePrezime,#poruka{
+    width: 100%;
+}
+#telefon, #email{
+    width: 100%;
+}
+.kontakt input, textarea{
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+.kontakt input{
+    height: 40px;
+}
+textarea{
+    height: 80px;
+}
+#raspored{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+.zalabele{
+    width: 45%;
+}
+#posalji{
+    width: 20%;
+}
+.greska{
+    border: 1px solid red!important;
+}
+.ispravno{
+    border: 1px solid green!important;
+}
+
+#autor{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px;
+}
+#plug{
+    text-align: center;
+}
+
 
 @media screen and (max-width:1000px){
     .blok{
@@ -248,6 +323,21 @@ a .fab{
     }
     ul li a{
         font-size: 25px;
+    }
+    #news{
+        width: 50%;
+    }
+    #posaljiN{
+        width: 20%;
+    }
+    #kontakt{
+        flex-direction: column;
+    }
+    .kontakt{
+        width: 70%;
+    }
+    #plug img{
+        width: 30%;
     }
   
 }
