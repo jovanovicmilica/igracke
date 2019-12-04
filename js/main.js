@@ -8,7 +8,7 @@ slika.setAttribute("alt","Slajder slika");
 
 //FOOTER
 var footer=document.getElementById("footer");
-var naslovNiz=["Igracke d.o.o.", "Informacije", "Newsletter"];
+var naslovNiz=["Igračke d.o.o.", "Informacije", "Newsletter"];
 for(let i=0;i<naslovNiz.length;i++){
     var footerBlokovi=document.createElement("div");
     footerBlokovi.setAttribute("class","footerB");
@@ -113,15 +113,18 @@ for(let i=0;i<nizS.length;i++){
 var plug=document.getElementById("plug");
 var brendovi=document.createElement("h2");
 brendovi.innerHTML="Brendovi";
+plug.appendChild(brendovi);
 var drzacB=document.createElement("div");
 drzacB.setAttribute("class","drzac");
-brendovi.appendChild(drzacB);
+plug.appendChild(drzacB);
 var slicica=[];
-plug.appendChild(brendovi);
 for(let i=0;i<10;i++){
+    var divdrzac=document.createElement("div");
+    divdrzac.setAttribute("class", "slicice");
+    drzacB.appendChild(divdrzac);
     slicica[i]=document.createElement("img");
     slicica[i].src="img/slicica"+[i+1]+".jpg";
-    drzacB.appendChild(slicica[i]);
+    divdrzac.appendChild(slicica[i]);
 }
 }
 if(url.indexOf("decaci.html")!=-1){
@@ -376,6 +379,10 @@ $(document).ready(function(){
                $(".meniU").removeClass("scrolling");
            }
        })
+
+       
+
+  
 });
 
 

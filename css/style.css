@@ -43,7 +43,7 @@ header{
 
 #logo{
     text-align: center;
-    width: 30%;
+    width: 10%;
 }
 nav{
     margin-right: 50px;
@@ -103,8 +103,21 @@ a{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-#plug img{
-    width: 20%;
+#plug{
+    text-align: center;
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px;
+}
+#plug h1{
+    margin: 20px;
+}
+.slicice{
+    width: 15%;
+    margin-top: 20px;
+}
+.slicice img{
+    width: 85%;
 }
 .blok{
     width: 15%;
@@ -251,14 +264,15 @@ textarea{
     align-items: center;
     padding: 30px 0px;
 }
-#plug{
-    text-align: center;
-}
 
 
 @media screen and (max-width:1000px){
     .blok{
         width: 30%;
+    }
+    .slicice{
+        width: 20%;
+        margin: 10px;
     }
 }
 
@@ -289,8 +303,9 @@ textarea{
         position: relative;
     }
     header{
-        justify-content: space-around;
+        justify-content: space-between;
         position: static;
+        padding: 0px 20px;
     }
     header div{
         display: block!important;
@@ -336,8 +351,14 @@ textarea{
     .kontakt{
         width: 70%;
     }
-    #plug img{
-        width: 30%;
+    .zalabele{
+        width: 100%;
+    }
+    #raspored{
+        flex-direction: column;
+    }
+    .slicice{
+        width: 40%;
     }
   
 }
