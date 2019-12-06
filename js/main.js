@@ -183,7 +183,7 @@ if(url.indexOf("kontakt.html")!=-1){
     var taster=document.getElementById("posalji");
 
 
-    var reImePrezime=/^[A-ZČĆŠĐŽ][a-zčćšđž]{2,}(\s[A-Z][a-z]{2,})*$/;
+    var reImePrezime=/^[A-ZČĆŠĐŽ][a-zčćšđž]{2,}(\s[A-ZČĆŠĐŽ][a-zčćšđž]{2,})*$/;
     var reTelefon=/^06[\d]\/[\d]{3}\-[\d]{2}-[\d]{2,3}$/;
     
 
