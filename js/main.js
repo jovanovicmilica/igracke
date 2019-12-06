@@ -66,12 +66,27 @@ input.setAttribute("id", "news");
 input.setAttribute("placeholder", "E-mail");
 treciD.appendChild(forma2);
 forma2.appendChild(input);
-var posalji=document.createElement("input");
-posalji.setAttribute("type", "button");
-posalji.setAttribute("value", "Posalji");
-posalji.setAttribute("id", "posaljiN");
-forma2.appendChild(posalji);
+var posaljiN=document.createElement("input");
+posaljiN.setAttribute("type", "button");
+posaljiN.setAttribute("value", "Posalji");
+posaljiN.setAttribute("id", "posaljiN");
+forma2.appendChild(posaljiN);
 document.querySelectorAll(".footerB")[2].insertBefore(treciD,treci);
+
+var reEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+posaljiN.addEventListener("click", function(){
+    if(reEmail.test(input.value)){
+        input.classList.add("ispravno");
+        input.classList.remove("greska");
+    }
+    else{
+        input.classList.remove("ispravno");
+        input.classList.add("greska");
+        
+    }
+})
+
 
 
 var dokumentacija=document.createElement("a");
@@ -161,9 +176,9 @@ if(url.indexOf("kontakt.html")!=-1){
     var taster=document.getElementById("posalji");
 
 
-    var reImePrezime=/^[A-ZČĆŠĐŽ][a-zčćšđž]{2,}(\s[A-Z][a-z]{2,})*$/; 
+    var reImePrezime=/^[A-ZČĆŠĐŽ][a-zčćšđž]{2,}(\s[A-Z][a-z]{2,})*$/;
     var reTelefon=/^06[\d]\/[\d]{3}\-[\d]{2}-[\d]{2,3}$/;
-    var reEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    
 
     var tacno=0;
 
@@ -176,7 +191,6 @@ if(url.indexOf("kontakt.html")!=-1){
         else{
             imePrezime.classList.remove("ispravno");
             imePrezime.classList.add("greska");
-            tacno=0;
         }
     });
 
@@ -189,7 +203,6 @@ if(url.indexOf("kontakt.html")!=-1){
         else{
             telefon.classList.remove("ispravno");
             telefon.classList.add("greska");
-            tacno=0;
         }
     });
 
@@ -202,7 +215,6 @@ if(url.indexOf("kontakt.html")!=-1){
         else{
             email.classList.remove("ispravno");
             email.classList.add("greska");
-            tacno=0;
         }
     });
 
@@ -210,7 +222,6 @@ if(url.indexOf("kontakt.html")!=-1){
         if(poruka.value==''){
             poruka.classList.remove("ispravno");
             poruka.classList.add("greska");
-            tacno=0;
         }
         else{
             poruka.classList.add("ispravno");
@@ -223,13 +234,15 @@ if(url.indexOf("kontakt.html")!=-1){
     var ispravno=document.getElementById("tacno");
     ispravno.classList.add("none");
     taster.addEventListener("click",function(){
-        if(tacno){
+        if(tacno==4){
             greske.classList.add("none");
             ispravno.classList.remove("none");
+            console.log(tacno);
         }
         else{
             greske.classList.remove("none");
             ispravno.classList.add("none");
+            console.log((tacno));
         }
     });
 
@@ -352,14 +365,25 @@ $(document).ready(function(){
     podmeni.addClass("none");
     var lipodmeni=$("#lizapodmeni");
     var aTagovi=$('header a');
-    $(lipodmeni).hover(
-        function(){
-            podmeni.addClass("visible");
-            },
-        function(){
-            podmeni.removeClass("visible");
-            }
-        );
+
+    var sirina=$(window).width();
+       if(sirina>820){
+        $(lipodmeni).hover(
+            function(){
+                podmeni.addClass("visible");
+                },
+            function(){
+                podmeni.removeClass("visible");
+                }
+            );
+       }
+       else if(sirina<820){
+        $(lipodmeni).click(
+            function(e){
+                $("#meni").toggleClass("visible");
+                $("#meni").toggleClass("none");
+            });
+       }
         $(".hamburger").click(
            function(){
                $(this).toggleClass("none");
@@ -367,6 +391,7 @@ $(document).ready(function(){
                $(this).toggleClass("none");
            }
        );
+
 
         //SKROL ZA MENI
         $(window).scroll(function() {    
