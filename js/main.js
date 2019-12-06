@@ -68,7 +68,7 @@ treciD.appendChild(forma2);
 forma2.appendChild(input);
 var posaljiN=document.createElement("input");
 posaljiN.setAttribute("type", "button");
-posaljiN.setAttribute("value", "Posalji");
+posaljiN.setAttribute("value", "Pošalji");
 posaljiN.setAttribute("id", "posaljiN");
 forma2.appendChild(posaljiN);
 document.querySelectorAll(".footerB")[2].insertBefore(treciD,treci);
@@ -131,6 +131,7 @@ for(let i=0;i<nizS.length;i++){
     tekst.appendChild(naslov);
     tekst.appendChild(tekstVesti);
     slike.setAttribute("src","img/"+nizS[i]);
+    slike.setAttribute("alt","Slika vesti");
 }
 
 var plug=document.getElementById("plug");
@@ -147,6 +148,7 @@ for(let i=0;i<10;i++){
     drzacB.appendChild(divdrzac);
     slicica[i]=document.createElement("img");
     slicica[i].src="img/slicica"+[i+1]+".jpg";
+    slicica[i].setAttribute("alt","Slika brenda");
     divdrzac.appendChild(slicica[i]);
 }
 }
