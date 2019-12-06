@@ -91,7 +91,7 @@ posaljiN.addEventListener("click", function(){
 
 var dokumentacija=document.createElement("a");
 dokumentacija.innerHTML="Dokumentacija";
-dokumentacija.setAttribute("href","#");
+dokumentacija.setAttribute("href","dokumentacija.pdf");
 document.querySelectorAll(".footerB")[2].appendChild(dokumentacija);
 
 var sitemap=document.createElement("a");
@@ -417,7 +417,7 @@ $(document).ready(function(){
 
        
 
-  
+       
 });
 
 
