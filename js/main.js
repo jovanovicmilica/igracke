@@ -94,11 +94,16 @@ dokumentacija.innerHTML="Dokumentacija";
 dokumentacija.setAttribute("href","#");
 document.querySelectorAll(".footerB")[2].appendChild(dokumentacija);
 
+var sitemap=document.createElement("a");
+sitemap.innerHTML="Sitemap";
+sitemap.setAttribute("href","sitemap.xml");
+document.querySelectorAll(".footerB")[2].appendChild(sitemap);
+
 
 let url=location.href;
 
 if(url.indexOf("index.html")!=-1){
-var nizNaslovAkcija=["Lego princeza","Garaza","Plisana maca","Vozilo"];
+var nizNaslovAkcija=["Lego princeza","Garaža","Plišana maca","Vozilo"];
 var novaCenaAkcija=["9.919,20","3.119,21","5.439,19","5.199,19"];
 proizvodi("akcija","Ove nedelje na akciji","akcija",nizNaslovAkcija,novaCenaAkcija);
     
@@ -379,7 +384,7 @@ $(document).ready(function(){
        }
        else if(sirina<820){
         $(lipodmeni).click(
-            function(e){
+            function(){
                 $("#meni").toggleClass("visible");
                 $("#meni").toggleClass("none");
             });

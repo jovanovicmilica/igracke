@@ -92,7 +92,7 @@ a{
 #slika img,.blok img{
     width: 100%;
 }
-#akcija,#bebe,#devojcice,#decaci,#drusigre{
+#akcija,#bebe,#devojcice,#decaci,#drusigre, #autor{
     padding: 30px 0px;
     width: 100%;
     text-align: center;
@@ -265,12 +265,18 @@ textarea{
     border: 1px solid green!important;
 }
 
-#autor{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+#autor .drzac{
     align-items: center;
-    padding: 30px 0px;
+}
+.slikaja{
+    width: 30%;
+}
+.slikaja img{
+    width: 100%;
+}
+
+a[href="#"],a[href="sitemap.xml"]{
+    margin: 10px;
 }
 
 
@@ -364,6 +370,9 @@ textarea{
     }
     .slicice{
         width: 40%;
+    }
+    .slikaja{
+        width: 60%;
     }
   
 }
